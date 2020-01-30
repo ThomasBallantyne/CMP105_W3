@@ -15,10 +15,21 @@ public:
 	void update(float dt);
 	void render();
 
+	//circle variables
 	float speed = 100, distance;
-	int direction;
 	bool facing=false;
 	sf::Vector2f coord;
+
+	//square variables
+	sf::Vector2f coord1;
+	int direction;
+	float distance1;
+
+	//random variables
+	float angle=45, speed1=200;
+	sf::Vector2f speed2 = sf::Vector2f(100, -100); 
+	sf::Vector2f coord2 = (sf::Vector2f(100, 100));
+	sf::Vector2f distance2;
 
 private:
 	// Default functions for rendering to the screen.
@@ -31,5 +42,6 @@ private:
 
 	sf::CircleShape circle;
 	sf::RectangleShape rect;
+	sf::CircleShape circle1;
 
 };
