@@ -15,6 +15,11 @@ public:
 	void update(float dt);
 	void render();
 
+	float speed = 100, distance;
+	int direction;
+	bool facing=false;
+	sf::Vector2f coord;
+
 private:
 	// Default functions for rendering to the screen.
 	void beginDraw();
@@ -23,4 +28,8 @@ private:
 	// Default variables for level class.
 	sf::RenderWindow* window;
 	Input* input;
+
+	sf::CircleShape circle;
+	sf::RectangleShape rect;
+
 };
